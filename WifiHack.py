@@ -1034,11 +1034,11 @@ class WiFiScanner:
             return text
 
         if self.vuln_list:
-            print('Network marks: {1} {0} {2} {0} {3}'.format(
+            print('Tanda Jaringan: {1} {0} {2} {0} {3}'.format(
                 '|',
-                colored('Possibly vulnerable', color='green'),
-                colored('WPS locked', color='red'),
-                colored('Already stored', color='yellow')
+                colored('WPS Rentan', color='green'),
+                colored('WPS Terkunci', color='red'),
+                colored('WPS Tersimpan', color='yellow')
             ))
         print('Networks list:')
         print('{:<4} {:<18} {:<25} {:<8} {:<4} {:<27} {:<}'.format(
@@ -1236,7 +1236,7 @@ if __name__ == '__main__':
                     vuln_list = []
                 scanner = WiFiScanner(args.interface, vuln_list)
                 if not args.loop:
-                    print('[*] BSSID not specified (--bssid) — scanning for available networks')
+                    print('[#] MEMULAI PEMINDAIAN JARINGAN WIFI SEKITAR')
                 args.bssid = scanner.prompt_network()
 
             if args.bssid:
@@ -1253,12 +1253,12 @@ if __name__ == '__main__':
         except KeyboardInterrupt:
             if args.loop:
                 if input("\n[?] Exit the script (otherwise continue to AP scan)? [N/y] ").lower() == 'y':
-                    print("Aborting…\nStay With\nID-STORE ")
+                    print("Kembali…\nTetap Bersama\nID-STORE ")
                     break
                 else:
                     args.bssid = None
             else:
-                print("\nAborting…\nStay With\nID-STORE ")
+                print("\nKembali…\nTetap Bersama\nID-STORE ")
                 break
 
     if args.iface_down:
