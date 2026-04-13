@@ -1040,7 +1040,7 @@ class WiFiScanner:
                 colored('WPS Terkunci', color='red'),
                 colored('WPS Tersimpan', color='yellow')
             ))
-        print('Networks list:')
+        print('Daftar Jaringan:')
         print('{:<4} {:<18} {:<25} {:<8} {:<4} {:<27} {:<}'.format(
             '#', 'BSSID', 'ESSID', 'Sec.', 'PWR', 'WSC device name', 'WSC model'))
 
